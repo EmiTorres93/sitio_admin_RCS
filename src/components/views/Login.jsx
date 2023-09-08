@@ -1,6 +1,7 @@
 import { Container, Form, Card, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import { login } from "../helpers/queries";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const {
@@ -11,7 +12,17 @@ const Login = () => {
 
   const onSubmit = (usuario) => {
     console.log(usuario);
-    login(usuario);
+    login(usuario).then((respuesta) => {
+      if (respuesta) {
+        Swal.fire(
+          "Bienvenida! " + respuesta.nombreUsuario,
+          "Ingresaste a GameStore!",
+          "success"
+        );
+      } else {
+        Swal.fire("Ocurrió un error!", "Email o password incorrecto", "error");
+      }
+    });
   };
 
   return (
