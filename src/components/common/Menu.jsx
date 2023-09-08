@@ -4,10 +4,15 @@ import { Link, NavLink } from "react-router-dom";
 const Menu = () => {
   return (
     <Navbar bg="danger" className="p-3 mb-5" variant="dark" expand="lg">
-      <Container className="d-flex">
+      <Container className="d-flex footerText fs-4">
         <div>
           <Navbar.Brand as={Link} to={"/"}>
-            Gamers Landing
+            <img
+              src="logo.jpg"
+              alt="logo.jpg"
+              width={120}
+              className="rounded-4 border border-end-0 border-5 border-dark"
+            ></img>
           </Navbar.Brand>
         </div>
         <div>
@@ -21,7 +26,9 @@ const Menu = () => {
               <NavLink className={"nav-link"} end to={"/administrador"}>
                 Administrador
               </NavLink>
-              <NavLink className={"nav-link"}>Login</NavLink>
+              <NavLink className={"nav-link"} end to={"/login"}>
+                Login
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </div>

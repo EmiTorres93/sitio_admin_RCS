@@ -49,14 +49,23 @@ const ItemProducto = ({ producto, id, setProductos }) => {
     <>
       <tr>
         <td>{producto.id}</td>
-        <td className="fs-5">{producto.nombreProducto}</td>
-        <td className="fs-5">{producto.precio}</td>
-        <td>{producto.imagen}</td>
-        <td className="fs-5">{producto.categoria}</td>
-        <td className="d-flex flex-nowrap">
+        <td className="text-center fs-5">{producto.nombreProducto}</td>
+        <td className="text-center fs-5">${producto.precio}</td>
+        <td className="d-flex justify-content-center align-items-center">
+          <img
+            className="m-2"
+            width={150}
+            src={producto.imagen}
+            alt={producto.nombreProducto}
+          />
+        </td>
+        <td className="text-center fs-5">{producto.categoria}</td>
+
+        <td className="text-center">
           <Button variant="danger" onClick={borrarProducto}>
             X
           </Button>
+
           <Link
             className="fs-5 fw-bold mx-2 btn btn-warning"
             to={`/administrador/editar/${producto.id}`}

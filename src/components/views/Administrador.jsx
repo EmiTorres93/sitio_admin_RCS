@@ -32,15 +32,33 @@ const Administrador = () => {
         </Row>
         <hr />
         {productos.length != 0 ? (
-          <Table className="my-5" responsive striped bordered hover>
-            <thead>
-              <tr>
-                <th>Cod</th>
-                <th>Producto</th>
-                <th>Precio</th>
-                <th>URL de Imagen</th>
-                <th>Categoría</th>
-                <th>Opciones</th>
+          <Table
+            className="my-5 border border-dark-subtle border-5"
+            responsive
+            striped
+            bordered
+            hover
+          >
+            <thead className="border border-dark-subtle border-5">
+              <tr className="border border-dark-subtle border-5">
+                <th className="border border-dark-subtle border-5 text-center ">
+                  Cod
+                </th>
+                <th className="border border-dark-subtle border-5 text-center">
+                  Producto
+                </th>
+                <th className="border border-dark-subtle border-5 text-center">
+                  Precio
+                </th>
+                <th className="border border-dark-subtle border-5 text-center">
+                  Imagen
+                </th>
+                <th className="border border-dark-subtle border-5 text-center">
+                  Categoría
+                </th>
+                <th className="border border-dark-subtle border-5 text-center">
+                  Opciones
+                </th>
               </tr>
             </thead>
 

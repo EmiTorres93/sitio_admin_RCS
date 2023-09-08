@@ -9,20 +9,52 @@
       "id": 1
     },
     {
-      "nombreProducto": "Mario Bross",
+      "nombreProducto": "Mario Bros",
       "descripcion": "juego de aventura",
       "precio": "3800",
-      "imagen": "https://howlongtobeat.com/games/111702_Sonic_Triple_Trouble_16-Bit.jpg",
+      "imagen": "https://1.bp.blogspot.com/-awj7sMrrqc0/WSb--p38I2I/AAAAAAAABCE/WgZHCWqxwR8x36l-CNENpZaeRlrK1PWTACLcB/s400/portadasupermarioworld.jpg",
       "categoria": "Aventura",
       "id": 2
     },
     {
-      "nombreProducto": "Space Ace",
-      "descripcion": "juego del espacio de estrategia",
-      "precio": "8000",
-      "imagen": "https://howlongtobeat.com/games/111702_Sonic_Triple_Trouble_16-Bit.jpg",
+      "nombreProducto": "Minecraft",
+      "descripcion": "juego entretenido para ganar status y barrios",
+      "precio": "10000",
+      "imagen": "https://www.softzone.es/app/uploads-softzone.es/2022/10/minecraft-modo-experto.jpg",
       "categoria": "Estrategia",
       "id": 3
+    },
+    {
+      "nombreProducto": "Fifa 23",
+      "descripcion": "juego deportivo de fútbol",
+      "precio": "12000",
+      "imagen": "https://kalimagames.com/wp-content/uploads/2022/07/COVER-PS4-BORDES-RECTOS-6.png",
+      "categoria": "Deporte",
+      "id": 4
+    },
+    {
+      "nombreProducto": "Real Boxing 2",
+      "descripcion": "juego de pelea callejera",
+      "precio": "8600",
+      "imagen": "https://i.ytimg.com/vi/gtwSFctSjLw/maxresdefault.jpg",
+      "categoria": "Lucha",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Gran Turismo 7",
+      "descripcion": "juego de carreras",
+      "precio": "9600",
+      "imagen": "https://www.mundodeportivo.com/alfabeta/hero/2022/03/gt7.1646167508.9789.jpg?width=768&aspect_ratio=16:9&format=nowebp",
+      "categoria": "Carreras",
+      "id": 6
+    }
+  ],
+  "usuario": [
+    {
+      "nombreUsuario": "Admin",
+      "email": "admin@gamestore.com",
+      "password": "123456aA",
+      "id": 1
     }
   ]
 }

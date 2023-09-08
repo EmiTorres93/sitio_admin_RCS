@@ -8,6 +8,7 @@ import Menu from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import Error404 from "./components/views/Error404";
 import Inicio from "./components/views/Inicio";
+import Login from "./components/views/Login";
 import { useState } from "react";
 import EncapsularRutas from "./components/routes/EncapsularRutas";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
@@ -24,7 +25,7 @@ function App() {
       <Menu></Menu>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
-
+        <Route exact path="/login" element={<Login></Login>}></Route>
         <Route
           exact
           path="/administrador"

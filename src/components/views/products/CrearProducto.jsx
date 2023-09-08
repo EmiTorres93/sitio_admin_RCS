@@ -64,7 +64,7 @@ const CrearProducto = () => {
               required: "El nombre del producto es un dato obligatorio",
               pattern: {
                 value:
-                  /(\W|^)(Mario Bross|Sonic Triple Trouble|Space Ace)(\W|$)/,
+                  /(\W|^)(Mario Bros|Real Boxing 2|Sonic Triple Trouble|Space Ace|GTA V|Fifa 23|Minecraft|Mortal Kombat 11|Need for speed|Gran Turismo 7)(\W|$)/,
                 message:
                   "El nombre debe cumplir con el formato válido correspondiente a ese producto",
               },
@@ -152,6 +152,15 @@ const CrearProducto = () => {
             </option>
             <option className="fs-5" value="Aventura">
               Aventura
+            </option>
+            <option className="fs-5" value="Deporte">
+              Deporte
+            </option>
+            <option className="fs-5" value="Lucha">
+              Lucha
+            </option>
+            <option className="fs-5" value="Carreras">
+              Carreras
             </option>
           </Form.Select>
           <Form.Text className="text-danger">
