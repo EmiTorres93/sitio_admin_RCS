@@ -1,7 +1,18 @@
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Menu = ({ usuarioActivo, setUsuarioActivo }) => {
+  const navegacion = useNavigate();
+
+  const logout = () => {
+    //limpiar el State
+    setUsuarioActivo({});
+    //limpiar el sessionStorage
+    sessionStorage.removeItem("usuarioLogueado");
+    //redireccionar a la página principal
+    navegacion("/");
+  };
+
   return (
     <Navbar bg="danger" className="p-3 mb-5" variant="dark" expand="lg">
       <Container className="d-flex footerText fs-4">
@@ -29,7 +40,7 @@ const Menu = ({ usuarioActivo, setUsuarioActivo }) => {
                   <NavLink className={"nav-link"} end to={"/administrador"}>
                     Administrador
                   </NavLink>
-                  <Button variant="dark" className="fw-bold">
+                  <Button variant="dark" className="fw-bold" onClick={logout}>
                     Logout
                   </Button>
                 </>
