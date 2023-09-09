@@ -1,7 +1,7 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({ usuarioActivo, setUsuarioActivo }) => {
   return (
     <Navbar bg="danger" className="p-3 mb-5" variant="dark" expand="lg">
       <Container className="d-flex footerText fs-4">
@@ -23,12 +23,21 @@ const Menu = () => {
                 Inicio
               </NavLink>
               <NavLink className={"nav-link"}>Registro</NavLink>
-              <NavLink className={"nav-link"} end to={"/administrador"}>
-                Administrador
-              </NavLink>
-              <NavLink className={"nav-link"} end to={"/login"}>
-                Login
-              </NavLink>
+              {usuarioActivo.email ? (
+                <>
+                  {" "}
+                  <NavLink className={"nav-link"} end to={"/administrador"}>
+                    Administrador
+                  </NavLink>
+                  <Button variant="dark" className="fw-bold">
+                    Logout
+                  </Button>
+                </>
+              ) : (
+                <NavLink className={"nav-link"} end to={"/login"}>
+                  Login
+                </NavLink>
+              )}
             </Nav>
           </Navbar.Collapse>
         </div>

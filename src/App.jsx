@@ -14,18 +14,23 @@ import EncapsularRutas from "./components/routes/EncapsularRutas";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 
 function App() {
-  //let productosCargados =
-  //JSON.parse(localStorage.getItem("productoAgregado")) || {};
-
-  //const [mostrarProductosCargados, setMostrarProductosCargados] =
-  //useState(productosCargados);
+  const usuarioLogueado =
+    JSON.parse(sessionStorage.getItem("usuarioLogueado")) || {};
+  const [usuarioActivo, setUsuarioActivo] = useState(usuarioLogueado);
 
   return (
     <BrowserRouter>
-      <Menu></Menu>
+      <Menu
+        usuarioActivo={usuarioActivo}
+        setUsuarioActivo={setUsuarioActivo}
+      ></Menu>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
-        <Route exact path="/login" element={<Login></Login>}></Route>
+        <Route
+          exact
+          path="/login"
+          element={<Login setUsuarioActivo={setUsuarioActivo}></Login>}
+        ></Route>
         <Route
           exact
           path="/administrador"
