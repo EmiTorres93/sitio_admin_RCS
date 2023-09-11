@@ -1,9 +1,10 @@
 const variable_entornoProductos = import.meta.env.VITE_API_PRODUCTOS;
+const variable_entornoUsuario = import.meta.env.VITE_API_USUARIO;
 
 //esta función recibe de parámetro un usuario con email y password. El objeto que validó react-hook-form es lo que le mando a esta función
 export const login = async (usuario) => {
   try {
-    const respuesta = await fetch("http://localhost:3004/usuario");
+    const respuesta = await fetch(variable_entornoUsuario);
     const listaUsuario = await respuesta.json();
 
     const usuarioBuscado = listaUsuario.find(
