@@ -43,6 +43,16 @@ export const agregarProducto = async (producto) => {
   }
 };
 
+export const listaProductos = async () => {
+  try {
+    const respuesta = await fetch(variable_entornoProductos);
+    const objetoProductos = await respuesta.json();
+    return objetoProductos;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
 /*const listaProductos = await respuesta.json();
 
     const productoBuscado = listaProductos.find(
